@@ -1,0 +1,86 @@
+---
+const { title = 'S.Y', description = 'An archive of a person becoming.' } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content={description} />
+    <title>{title} — S.Y</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="/">S.Y</a>
+      <nav>
+        <a href="/works">Works</a>
+        <a href="/notes">Notes</a>
+        <a href="/fragments">Fragments</a>
+        <a href="/collections">Collections</a>
+        <a href="/now">Now</a>
+        <a href="/archive">Archive</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      <span>S.Y © {new Date().getFullYear()}</span>
+      <span>An archive of a person becoming.</span>
+    </footer>
+  </body>
+</html>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Inter:wght@400;500;600&display=swap');
+
+  :global(*) { box-sizing: border-box; }
+  :global(html) { background: #f5f3ee; color: #171717; }
+  :global(body) {
+    margin: 0;
+    font-family: Inter, system-ui, sans-serif;
+    line-height: 1.6;
+  }
+  .site-header {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+  }
+  .logo {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: .08em;
+  }
+  nav { display: flex; flex-wrap: wrap; gap: 20px; }
+  nav a {
+    color: inherit;
+    text-decoration: none;
+    font-size: 13px;
+    opacity: .7;
+  }
+  nav a:hover { opacity: 1; }
+  main { max-width: 1180px; margin: 0 auto; padding: 70px 32px 120px; min-height: 75vh; }
+  footer {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 28px 32px 45px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    color: #777;
+    font: 12px 'DM Mono', monospace;
+  }
+  :global(a) { color: inherit; }
+  :global(.mono) { font-family: 'DM Mono', monospace; }
+  @media (max-width: 700px) {
+    .site-header { align-items: flex-start; flex-direction: column; }
+    nav { gap: 12px 16px; }
+    main { padding-top: 40px; }
+    footer { flex-direction: column; }
+  }
+</style>

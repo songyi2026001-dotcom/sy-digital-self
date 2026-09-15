@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import '../styles/global.css';
+---
+<BaseLayout title="Home">
+  <div class="eyebrow">Digital Self / 001</div>
+  <h1 class="display" style="margin: 22px 0 32px;">S.Y</h1>
+  <p class="lead">An archive of a person becoming.</p>
+  <p style="max-width:560px;color:#686868;margin-top:28px;">
+    A place for things I've made, noticed, loved, collected, and kept.
+  </p>
+
+  <section class="section">
+    <div class="eyebrow" style="margin-bottom:18px;">Enter</div>
+    <div class="grid">
+      <a class="card" href="/works"><span class="mono">01</span><h2>Works</h2><p>Finished works, projects, experiments.</p></a>
+      <a class="card" href="/notes"><span class="mono">02</span><h2>Notes</h2><p>Thoughts that have grown long enough to become something.</p></a>
+      <a class="card" href="/fragments"><span class="mono">03</span><h2>Fragments</h2><p>Small observations, unfinished ideas, sentences.</p></a>
+      <a class="card" href="/collections"><span class="mono">04</span><h2>Collections</h2><p>Music, books, images, places, and other things worth keeping.</p></a>
+      <a class="card" href="/now"><span class="mono">05</span><h2>Now</h2><p>What is occupying my attention at this moment.</p></a>
+      <a class="card" href="/archive"><span class="mono">06</span><h2>Archive</h2><p>A chronological trace of this digital life.</p></a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="eyebrow">Currently</div>
+    <div class="rule" style="margin-top:18px;padding-top:22px;">
+      <p class="lead">Building a place for the things I don't want to lose.</p>
+    </div>
+  </section>
+</BaseLayout>

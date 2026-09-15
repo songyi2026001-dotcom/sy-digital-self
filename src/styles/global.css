@@ -1,0 +1,19 @@
+h1, h2, h3, p { margin-top: 0; }
+.eyebrow { font: 12px 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .08em; color: #777; }
+.display { font-size: clamp(52px, 9vw, 120px); line-height: .92; letter-spacing: -.055em; font-weight: 500; }
+.lead { max-width: 600px; font-size: clamp(18px, 2.2vw, 25px); line-height: 1.4; }
+.section { margin-top: 110px; }
+.rule { border-top: 1px solid #c9c6be; }
+.grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1px; background: #c9c6be; }
+.card { background: #f5f3ee; padding: 28px; text-decoration: none; display: block; min-height: 150px; }
+.card:hover { background: #ebe8e0; }
+.card h2 { font-size: 25px; font-weight: 500; margin: 15px 0 8px; }
+.card p { color: #686868; max-width: 420px; }
+.list { border-top: 1px solid #c9c6be; }
+.list a { display: grid; grid-template-columns: 120px 1fr; gap: 24px; padding: 18px 0; border-bottom: 1px solid #c9c6be; text-decoration: none; }
+.list a:hover { padding-left: 8px; }
+.date { font: 12px 'DM Mono', monospace; color: #777; }
+@media (max-width: 700px) {
+  .grid { grid-template-columns: 1fr; }
+  .list a { grid-template-columns: 1fr; gap: 4px; }
+}
